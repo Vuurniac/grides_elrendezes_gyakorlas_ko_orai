@@ -20,8 +20,8 @@ nav ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: auto;
     list-style-type: none;
-    padding-left: 25%;
-    padding-right: 25%;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
 }
 
 nav ul li {
@@ -53,4 +53,22 @@ aside.masik {
 
 footer {
     grid-area: f;
+}
+
+@media screen and (width < 680px) {
+    main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:    "h"
+                            "n"
+                            "ar"
+                            "as1"
+                            "as2"
+                            "f";
+}
+
+nav ul {
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
 }
