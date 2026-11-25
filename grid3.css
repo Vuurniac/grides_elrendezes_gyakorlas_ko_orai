@@ -1,0 +1,75 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-areas:    "h h n"
+                            "as1 as2 ar"
+                            "f f f";
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+nav ul {
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+    justify-content: center;
+}
+
+nav ul li {
+    background-color: bisque;
+    border: solid 1px gray;
+    border-radius: 4px;
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+
+article {
+    grid-area: ar;
+}
+
+aside.egyik {
+    grid-area: as1;
+}
+
+aside.masik {
+    grid-area: as2;
+}
+
+footer {
+    grid-area: f;
+}
+
+@media screen and (width < 680px) {
+    main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:    "h"
+                            "n"
+                            "ar" 
+                            "as1"
+                            "as2"
+                            "f";
+    }
+
+    nav ul {
+        grid-template-columns: auto;
+        float: none;
+    }
+}
